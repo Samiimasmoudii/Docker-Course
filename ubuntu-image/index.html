@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date du jour</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="dateMessage"></h1>
+
+    <script>
+        function afficherDate() {
+            setTimeout(()=>{
+            const joursSemaine = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+            const mois = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+
+            const dateActuelle = new Date();
+            const jourSemaine = joursSemaine[dateActuelle.getDay()];
+            const jour = dateActuelle.getDate();
+            const moisActuel = mois[dateActuelle.getMonth()];
+            const annee = dateActuelle.getFullYear();
+
+            const message = `Bonjour, aujourd'hui c'est le ${jourSemaine} ${jour} ${moisActuel} ${annee}`;
+            document.getElementById("dateMessage").innerText = message;
+        },3000);}
+
+        afficherDate();
+    </script>
+
+</body>
+</html>

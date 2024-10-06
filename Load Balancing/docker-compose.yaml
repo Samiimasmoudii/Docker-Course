@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  web1:
+    build: .
+    volumes:
+      - web-content:/var/www/html
+    networks:
+      - webnet
+
+  web2:
+    build: .
+    volumes:
+      - web-content:/var/www/html
+    networks:
+      - webnet
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - webnet
+
+volumes:
+  web-content:
+
+networks:
+  webnet:
