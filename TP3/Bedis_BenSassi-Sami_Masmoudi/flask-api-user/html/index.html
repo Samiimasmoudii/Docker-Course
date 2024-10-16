@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Page</title>
+</head>
+thIS IS THE NEW PAGE
+<body>
+    <h1 id="greeting"></h1>This is the new Image
+    <script>
+        // Function to get the current date in a readable format
+        function getCurrentDate() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date();
+            return today.toLocaleDateString('fr-FR', options);
+        }
+
+        const options = {
+            method: 'GET',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+
+        };
+
+        // Fetch  date api
+        async function getApiCurrentDate() {
+            const response = await fetch("http://localhost:5000/date", options)
+            // Check response status
+            if (!response.ok) {
+                throw new Error('Response from api was not ok');
+            }
+
+            const today = await response.json();
+            return today.date;
+        }
+
+        // Function to display the greeting
+        async function displayGreeting() {
+            const currentDate = await getApiCurrentDate();
+            const greeting = `Bonjour, aujourd’hui c’est le ${currentDate}`;
+            document.getElementById('greeting').textContent = greeting;
+        }
+
+
+
+        // Call the function to display the greeting
+        //displayGreeting();
+
+        // Call the function to display the greeting with delay
+        //setTimeout(function () {
+        displayGreeting();
+        //}, 3000);
+    </script>
+</body>
+
+</html>

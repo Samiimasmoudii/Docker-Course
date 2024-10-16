@@ -1,0 +1,44 @@
+2024-10-16 09:38:36,338 WARNING:  * Debugger is active!
+2024-10-16 09:38:36,339 INFO:  * Debugger PIN: 400-720-140
+2024-10-16 09:38:37,569 INFO: Main page loaded
+2024-10-16 09:38:37,570 INFO: 127.0.0.1 - - [16/Oct/2024 09:38:37] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:38:40,602 INFO: Main page loaded
+2024-10-16 09:38:40,603 INFO: 127.0.0.1 - - [16/Oct/2024 09:38:40] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:38:43,635 INFO: Main page loaded
+2024-10-16 09:38:43,636 INFO: 127.0.0.1 - - [16/Oct/2024 09:38:43] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:38:46,673 INFO: Main page loaded
+2024-10-16 09:38:46,674 INFO: 127.0.0.1 - - [16/Oct/2024 09:38:46] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:38:49,708 INFO: Main page loaded
+2024-10-16 09:38:49,709 INFO: 127.0.0.1 - - [16/Oct/2024 09:38:49] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:38:56,273 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.3:5000
+2024-10-16 09:38:56,273 INFO: [33mPress CTRL+C to quit[0m
+2024-10-16 09:38:56,274 INFO:  * Restarting with stat
+2024-10-16 09:38:56,466 WARNING:  * Debugger is active!
+2024-10-16 09:38:56,467 INFO:  * Debugger PIN: 572-516-493
+2024-10-16 09:39:01,086 INFO: Main page loaded
+2024-10-16 09:39:01,087 INFO: 127.0.0.1 - - [16/Oct/2024 09:39:01] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:39:04,122 INFO: Main page loaded
+2024-10-16 09:39:04,122 INFO: 127.0.0.1 - - [16/Oct/2024 09:39:04] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:39:07,163 INFO: Main page loaded
+2024-10-16 09:39:07,164 INFO: 127.0.0.1 - - [16/Oct/2024 09:39:07] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:39:10,213 INFO: Main page loaded
+2024-10-16 09:39:10,214 INFO: 127.0.0.1 - - [16/Oct/2024 09:39:10] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:39:13,268 INFO: Main page loaded
+2024-10-16 09:39:13,268 INFO: 127.0.0.1 - - [16/Oct/2024 09:39:13] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:39:16,316 INFO: Main page loaded
+2024-10-16 09:39:16,317 INFO: 127.0.0.1 - - [16/Oct/2024 09:39:16] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:39:19,354 INFO: Main page loaded
+2024-10-16 09:39:19,354 INFO: 127.0.0.1 - - [16/Oct/2024 09:39:19] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:39:22,397 INFO: Main page loaded
+2024-10-16 09:39:22,397 INFO: 127.0.0.1 - - [16/Oct/2024 09:39:22] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:39:25,446 INFO: Main page loaded
+2024-10-16 09:39:25,447 INFO: 127.0.0.1 - - [16/Oct/2024 09:39:25] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:39:28,607 INFO: Main page loaded
+2024-10-16 09:39:28,608 INFO: 127.0.0.1 - - [16/Oct/2024 09:39:28] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:39:31,660 INFO: Main page loaded
+2024-10-16 09:39:31,661 INFO: 127.0.0.1 - - [16/Oct/2024 09:39:31] "GET /date HTTP/1.1" 200 -
+2024-10-16 09:39:34,716 INFO: Main page loaded
+2024-10-16 09:39:34,717 INFO: 127.0.0.1 - - [16/Oct/2024 09:39:34] "GET /date HTTP/1.1" 200 -

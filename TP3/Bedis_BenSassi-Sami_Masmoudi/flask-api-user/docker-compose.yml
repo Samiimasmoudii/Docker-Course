@@ -1,0 +1,42 @@
+version: '3'
+
+
+services:
+  backend:
+    image: newuserapplocal:latest
+    container_name: newuser_api_lab3
+
+    volumes:
+      -  ./app:/app
+      - /app/logs:/app.logs
+
+    ports:
+      - 5000:5000
+    
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/date"] 
+      interval: 3s       # Time between health checks
+      timeout: 10s        # Time before a health check times out
+      retries: 3          # Number of retries before marking as unhealthy
+      start_period: 10s   # Initial delay before starting health checks
+    
+    entrypoint: bash -c "python3 app.py"
+
+
+
+  front-end:
+    image: httpd:latest
+    container_name: new-web-server_lab3
+
+    volumes:
+      - ./html:/usr/local/apache2/htdocs/
+  
+    ports:
+      - 80:80
+
+ 
+
+
+volumes:
+  log-volume:
+    driver: local  

@@ -1,0 +1,32 @@
+version: '3'
+
+
+services:
+  backend:
+    image: flaskappv0:latest
+    container_name: api_lab3
+
+    volumes:
+      - ./app:/app
+
+    ports:
+      - 5000:5000
+
+    entrypoint: bash -c "python3 app.py"
+
+
+
+  front-end:
+    image: httpd:latest
+    container_name: web-server_lab3
+
+    volumes:
+      - ./html:/usr/local/apache2/htdocs/
+  
+    ports:
+      - 80:80
+
+
+
+
+
