@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Page</title>
+</head>
+
+<body>
+    <h1 id="greeting"></h1>
+    <h3>Hi There! Your app is running</h3>
+
+    <script>
+        // Function to get the current message from the backend API
+        async function getApiCurrentMessage() {
+            const options = {
+                method: 'GET',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            };
+
+            try {
+                // Replace 'localhost' with the correct API URL
+                const response = await fetch("http://localhost/Hello", options); // Update the URL if necessary
+                // Check response status
+                if (!response.ok) {
+                    throw new Error('Response from API was not ok');
+                }
+
+                const data = await response.json();
+                return data.message;  // Assuming the API returns {message: "Hello from Flask backend!"}
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        // Function to display the greeting message
+        async function displayGreeting() {
+            const greetingMessage = await getApiCurrentMessage();
+            if (greetingMessage) {
+                document.getElementById('greeting').textContent = greetingMessage;
+            } else {
+                document.getElementById('greeting').textContent = "Error fetching the greeting!";
+            }
+        }
+
+        // Call the function to display the greeting
+        displayGreeting();
+    </script>
+</body>
+
+</html>
